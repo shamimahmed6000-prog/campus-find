@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in — Campus Find</title><link rel="icon" type="image/svg+xml" href="images/logo.svg"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <div id="site-nav"></div>
+  <main class="auth-shell">
+    <section class="auth-card">
+      <img class="auth-logo" src="images/logo.svg" alt="Campus Find logo" width="96" height="96">
+      <div class="auth-intro"><p class="eyebrow">Welcome to Campus Find</p><h1>Good things find their way home.</h1><p>Sign in to post items, request a claim, and keep track of your updates.</p></div>
+      <div class="auth-tabs" role="tablist" aria-label="Account options"><button id="login-tab" class="auth-tab active" role="tab" aria-selected="true" aria-controls="login-panel">Sign in</button><button id="register-tab" class="auth-tab" role="tab" aria-selected="false" aria-controls="register-panel">Create account</button></div>
+      <form id="login-panel" class="auth-form" role="tabpanel" novalidate>
+        <div id="login-error" class="form-error" role="alert" hidden></div>
+        <div class="field"><label for="login-email">University email</label><input id="login-email" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="login-password">Password</label><input id="login-password" type="password" required autocomplete="current-password"></div>
+        <button class="button button-primary button-full" type="submit">Sign in</button>
+        <p class="demo-hint">Demo admin: <strong>admin@uni.edu</strong> / <strong>admin123</strong></p>
+      </form>
+      <form id="register-panel" class="auth-form" role="tabpanel" hidden novalidate>
+        <div id="register-error" class="form-error" role="alert" hidden></div>
+        <div class="field"><label for="register-name">Full name</label><input id="register-name" required maxlength="80" autocomplete="name"></div>
+        <div class="field"><label for="register-student-id">Student ID</label><input id="register-student-id" required maxlength="40"></div>
+        <div class="field"><label for="register-email">University email</label><input id="register-email" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="register-phone">Phone</label><input id="register-phone" type="tel" required maxlength="30" autocomplete="tel"></div>
+        <div class="field"><label for="register-password">Password (at least 6 characters)</label><input id="register-password" type="password" required minlength="6" autocomplete="new-password"></div>
+        <button class="button button-primary button-full" type="submit">Create account</button>
+      </form>
+    </section>
+  </main>
+  <div id="site-footer"></div><div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <script defer src="js/locations.js"></script><script defer src="js/storage.js"></script><script defer src="js/auth.js"></script><script defer src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Browse items — Campus Find</title><link rel="icon" type="image/svg+xml" href="images/logo.svg"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <div id="site-nav"></div>
+  <main class="page-shell">
+    <header class="page-heading"><p class="eyebrow">The campus lost &amp; found</p><h1>Browse items</h1>
+      <p>Search recent posts and filter to find what you’re looking for.</p></header>
+    <section id="item-filter-panel" class="filter-panel" aria-label="Search and filter items">
+      <button id="filters-toggle" class="filters-toggle" type="button" aria-expanded="false" aria-controls="filter-content">Filters</button>
+      <div id="filter-content" class="filter-content">
+        <div class="filter-grid">
+          <div class="field field-wide"><label for="item-search">Search</label><input id="item-search" type="search" placeholder="Title, description, or location"></div>
+          <div class="field"><label for="filter-type">Type</label><select id="filter-type"><option value="">All types</option><option>Lost</option><option>Found</option></select></div>
+          <div class="field"><label for="filter-category">Category</label><select id="filter-category"><option value="">All categories</option><option>Electronics</option><option>ID Card</option><option>Books</option><option>Clothing</option><option>Keys</option><option>Wallet/Bag</option><option>Others</option></select></div>
+          <div class="field"><label for="filter-location">Location</label><select id="filter-location"><option value="">All locations</option></select></div>
+          <div class="field"><label for="filter-from">From date</label><input id="filter-from" type="date"></div>
+          <div class="field"><label for="filter-to">To date</label><input id="filter-to" type="date"></div>
+          <div class="field"><label for="filter-sort">Sort by</label><select id="filter-sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></div>
+        </div>
+        <div class="filter-actions"><span id="results-count" class="muted"></span><button id="clear-filters" class="button button-outline button-small" type="button">Clear filters</button></div>
+      </div>
+    </section>
+    <section><div id="all-items" class="item-grid" aria-live="polite"></div>
+      <div id="items-empty" class="empty-state" hidden><span aria-hidden="true">🔎</span><h2>No items found</h2><p>Try changing your search or clearing some filters.</p></div>
+    </section>
+  </main>
+  <div id="site-footer"></div><div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <script defer src="js/locations.js"></script><script defer src="js/storage.js"></script><script defer src="js/auth.js"></script>
+  <script defer src="js/main.js"></script><script defer src="js/items.js"></script>
+</body>
+</html>

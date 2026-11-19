@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin panel — Campus Find</title><link rel="icon" type="image/svg+xml" href="images/logo.svg"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-protected="admin">
+  <div id="site-nav"></div>
+  <main class="page-shell">
+    <header class="page-heading"><p class="eyebrow">Campus Find administration</p><h1>Admin panel</h1><p>Review community posts and claim requests.</p></header>
+    <section id="admin-stats" class="stats-grid" aria-label="Portal statistics"></section>
+    <section class="admin-section"><div class="section-heading"><div><p class="eyebrow">Needs review</p><h2>Pending posts</h2></div></div><div id="pending-posts"></div></section>
+    <section class="admin-section"><div class="section-heading"><div><p class="eyebrow">Owner requests</p><h2>Pending claims</h2></div></div><div id="pending-claims"></div></section>
+    <section class="admin-section"><div class="section-heading"><div><p class="eyebrow">Community</p><h2>Users</h2></div></div><div id="admin-users"></div></section>
+    <section class="admin-section"><div class="section-heading"><div><p class="eyebrow">Moderation</p><h2>All posts</h2></div></div><div id="all-admin-posts"></div></section>
+  </main>
+  <div id="site-footer"></div><div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <script defer src="js/locations.js"></script><script defer src="js/storage.js"></script><script defer src="js/auth.js"></script>
+  <script defer src="js/main.js"></script><script defer src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Post an item — Campus Find</title><link rel="icon" type="image/svg+xml" href="images/logo.svg"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-protected="student">
+  <div id="site-nav"></div>
+  <main class="page-shell narrow-shell">
+    <header class="page-heading"><p class="eyebrow">Help your item find its owner</p><h1 id="post-page-title">Post an item</h1>
+      <p>Posts are reviewed by the campus team before appearing publicly.</p></header>
+    <form id="post-item-form" class="form-panel" novalidate>
+      <div id="post-error" class="form-error" role="alert" hidden></div>
+      <div class="form-grid">
+        <div class="field"><label for="post-type">I have *</label><select id="post-type" required><option value="">Choose one</option><option>Lost</option><option>Found</option></select></div>
+        <div class="field"><label for="post-category">Category *</label><select id="post-category" required><option value="">Choose category</option><option>Electronics</option><option>ID Card</option><option>Books</option><option>Clothing</option><option>Keys</option><option>Wallet/Bag</option><option>Others</option></select></div>
+        <div class="field field-full"><label for="post-title">Item title *</label><input id="post-title" maxlength="80" required placeholder="e.g. Navy blue water bottle"></div>
+        <div class="field field-full"><label for="post-description">Description *</label><textarea id="post-description" rows="4" maxlength="1000" required placeholder="Add identifying details that can help the right person recognize it."></textarea></div>
+        <fieldset id="lost-location-fields" class="location-fieldset field-full" disabled>
+          <legend>Where did you lose it? (choose up to 3 places) *</legend>
+          <label for="post-lost-locations">Lost locations <span id="lost-location-counter" class="location-counter">0/3</span></label>
+          <select id="post-lost-locations" multiple size="7" required aria-describedby="lost-location-help lost-location-feedback"></select>
+          <p id="lost-location-help" class="field-hint">Select one to three places. Choose “Not sure” if you cannot narrow it down.</p>
+          <div id="lost-location-chips" class="location-chips" aria-label="Selected lost locations"></div>
+          <p id="lost-location-feedback" class="location-feedback" role="status" aria-live="polite"></p>
+          <div class="field location-time-field"><label for="post-last-seen-time">Last seen time (optional)</label><input id="post-last-seen-time" type="time"></div>
+        </fieldset>
+        <fieldset id="found-location-fields" class="location-fieldset field-full" disabled>
+          <legend>Found item location *</legend>
+          <div class="location-form-grid">
+            <div class="field">
+              <label for="post-found-location">Where did you find it? *</label>
+              <select id="post-found-location" required><option value="">Choose a place</option></select>
+              <p id="found-location-detail" class="field-hint location-detail" hidden></p>
+            </div>
+            <div class="field">
+              <label for="post-kept-at">Where is the item now? *</label>
+              <select id="post-kept-at" required>
+                <option value="">Choose one</option>
+                <option>With me</option>
+                <option>CC Control Room - Lost &amp; Found Office</option>
+                <option>Safety &amp; Security Office</option>
+                <option>Other</option>
+              </select>
+              <p id="kept-at-detail" class="field-hint location-detail" hidden></p>
+            </div>
+          </div>
+        </fieldset>
+        <div class="field"><label for="post-date">Date lost/found *</label><input id="post-date" type="date" required></div>
+        <div class="field field-full"><label for="post-contact">Contact phone *</label><input id="post-contact" type="tel" maxlength="30" required placeholder="A number the owner can reach you at"></div>
+        <div class="field field-full"><label for="post-photo">Photo (optional, max 1 MB)</label><input id="post-photo" type="file" accept="image/*">
+          <p class="field-hint">Avoid showing personal information in the photo.</p><img id="photo-preview" class="photo-preview" alt="Preview of selected item photo" hidden></div>
+      </div>
+      <div class="form-actions"><a class="button button-outline" href="my-dashboard.html">Cancel</a><button class="button button-primary" type="submit">Submit for review</button></div>
+    </form>
+  </main>
+  <div id="site-footer"></div><div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <script defer src="js/locations.js"></script><script defer src="js/storage.js"></script><script defer src="js/auth.js"></script>
+  <script defer src="js/main.js"></script><script defer src="js/items.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My dashboard — Campus Find</title><link rel="icon" type="image/svg+xml" href="images/logo.svg"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-protected="student">
+  <div id="site-nav"></div>
+  <main class="page-shell">
+    <header class="page-heading"><p class="eyebrow">Your campus activity</p><h1>My dashboard</h1><p>Manage your posts and follow the progress of your claims.</p></header>
+    <div class="dashboard-tabs" role="tablist" aria-label="Dashboard sections">
+      <button class="dashboard-tab active" data-tab="posts" role="tab" aria-selected="true">My posts</button>
+      <button class="dashboard-tab" data-tab="claims" role="tab" aria-selected="false">My claims</button>
+      <button class="dashboard-tab" data-tab="received" role="tab" aria-selected="false">Claims received</button>
+    </div>
+    <section id="dashboard-posts" class="dashboard-panel" aria-live="polite"></section>
+    <section id="dashboard-claims" class="dashboard-panel" aria-live="polite" hidden></section>
+    <section id="dashboard-received" class="dashboard-panel" aria-live="polite" hidden></section>
+  </main>
+  <div id="site-footer"></div><div id="toast-region" class="toast-region" aria-live="polite"></div>
+  <script defer src="js/locations.js"></script><script defer src="js/storage.js"></script><script defer src="js/auth.js"></script>
+  <script defer src="js/main.js"></script><script defer src="js/items.js"></script>
+  <script defer src="js/claims.js"></script>
+</body>
+</html>
